@@ -1,0 +1,23 @@
+{
+    "sizes": [
+      "XXL",
+      "XL",
+      "L",
+      "S"
+    ],
+    "description": "These classic black jeans offer a versatile and timeless addition to any wardrobe. Featuring a straight-leg cut, they provide a comfortable, flattering fit for various body types. Crafted from durable denim, these jeans are both stylish and practical, perfect for both casual outings and semi-formal occasions. The clean, dark black color adds a sleek and sophisticated touch, making them easy to pair with any top, from t-shirts to shirts or hoodies. With their classic design and premium fit, these black jeans are a must-have staple for any wardrobe.",
+    "price": 170,
+    "imageUrl": "https://cdn.sanity.io/images/7xt4qcah/production/b2264d466c3c96f8ae3f1192a2f73ac313221576-183x275.jpg",
+    "category": "jeans",
+    "colors": [
+      "Green",
+      "Blue",
+      "Yellow",
+      "Red"
+    ],
+    "_id": "562caf8c-3d61-4c9d-b047-976e33e753c1",
+    "name": "Classic Black Straight-Leg Jeans",
+    "slug" : "classic-black-straight-leg-jeans",
+    "discountPercent": 16,
+    "isNew": false
+  }
