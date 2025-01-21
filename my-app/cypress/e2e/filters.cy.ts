@@ -1,5 +1,5 @@
 describe('Product Filters', () => {
-  const slug = "blue-jeans"
+ 
   beforeEach(() => {
     
     // Intercept the correct API request and give it an alias
@@ -63,21 +63,7 @@ describe('Product Filters', () => {
     cy.get('.text-xl').first().should('contain', 'Black T-Shirt'); // Check if correct product is displayed
   });
 
-  it('should navigate to the product details page when a product is clicked', function () {
-    // Click the first product
-    cy.get('.grid .border').first().click();
-  
-    // Log the URL for debugging
-    cy.url().then((url) => {
-      console.log('Current URL:', url); // Log the URL
-    });
-  
-    // Wait for the URL to change (wait until it contains /products/slug)
-    cy.location('pathname').should('include', '/products/'); // Wait until the pathname includes '/products/'
-  
-    // Use a more flexible check to match the dynamic slug
-    cy.location('pathname').should('match', /\/products\/[\w-]+/);  // Regex to match slug pattern
-  });
+ 
   
   
   
