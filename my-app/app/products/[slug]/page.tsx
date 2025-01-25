@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import 'react-notifications/lib/notifications.css';
 import { NotificationManager, NotificationContainer } from "react-notifications";
-import product from "@/sanity/schemaTypes/product";
+
 
 interface Product {
   name: string;

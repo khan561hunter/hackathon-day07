@@ -46,7 +46,7 @@ export default function Page_Two2() {
             
           <motion.div
             key={value._id}
-            className="w-full max-w-sm border border-gray-200 rounded-lg bg-white shadow-lg"
+            className="w-full max-w-sm border border-gray-200 rounded-lg bg-white shadow-lg scale-50"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}

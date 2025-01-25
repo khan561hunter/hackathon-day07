@@ -1,8 +1,6 @@
 "use client";
 // pages/User.tsx
-"use client";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function User() {
   const [email, setEmail] = useState("");
@@ -26,8 +24,13 @@ export default function User() {
       } else {
         setError(data.error || "Login failed.");
       }
-    } catch (err) {
-      setError("An unexpected error occurred.");
+    } catch (error: unknown) {
+      // TypeScript expects a specific error type, so you can safely cast it to 'any' or 'unknown'.
+      if (error instanceof Error) {
+        setError(error.message || "An unexpected error occurred.");
+      } else {
+        setError("An unexpected error occurred.");
+      }
     }
   };
 
@@ -52,27 +55,25 @@ export default function User() {
             required
           />
           <input
-             id="password"
-             type="password"
-             placeholder="Password"
-             value={password}
-             onChange={(e) => setPassword(e.target.value)}
-             className="border p-2 rounded"
-             required
-           />
-           <Link href={"/dashboard"}>
-           <button
-             id="login-button"
-             type="submit"
-             className="bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50"
-             disabled={!email || !password}
-           >
-             Login
-           </button>
-           </Link>
-         </form>
-         {error && <p className="text-red-500 mt-2">{error}</p>}
-       </div>
-     </div>
-   );
- }
+            id="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="border p-2 rounded"
+            required
+          />
+          <button
+            id="login-button"
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50"
+            disabled={!email || !password}
+          >
+            Login
+          </button>
+        </form>
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+      </div>
+    </div>
+  );
+}

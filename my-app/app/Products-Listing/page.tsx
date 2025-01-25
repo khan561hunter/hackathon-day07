@@ -18,7 +18,7 @@ type Product = {
 
 const FilterableProductList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<string[]>([
+  const [categories] = useState<string[]>([
     "tshirt",
     "short",
     "jeans",

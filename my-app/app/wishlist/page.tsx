@@ -65,27 +65,7 @@ export default function WishlistPage() {
     localStorage.setItem("cart", JSON.stringify(savedCart));
     setCart([...cart , product]); // Update the state to trigger re-render
   };
-  const handleAddToWishlist = (product: Product) => {
-    const savedWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
-
-    // Check if the product already exists in the cart
-    const existingProduct = savedWishlist.find((item: any) => item.id === product._id);
-
-    if (existingProduct) {
-      // If it exists, update the quantity
-      
-      existingProduct.quantity += product.quantity;
-
-      
-    } else {
-      // If it doesn't exist, add the new product with quantity 1
-      savedWishlist.push({ ...product });
-    }
-
-    // Save the updated cart to localStorage
-    localStorage.setItem("cart", JSON.stringify(savedWishlist));
-    setCart([...cart , product]); // Update the state to trigger re-render
-  };
+  
 
   // Function to remove a product from the cart
   

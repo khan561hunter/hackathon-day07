@@ -17,24 +17,7 @@ export default function CartPage() {
   }, []);
 
   // Function to add a product to the cart
-  const handleAddToCart = (product: Product) => {
-    const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
-
-    // Check if the product already exists in the cart
-    const existingProduct = savedCart.find((item: any) => item.id === product._id);
-
-    if (existingProduct) {
-      // If it exists, update the quantity
-      existingProduct.quantity += 1;
-    } else {
-      // If it doesn't exist, add the new product with quantity 1
-      savedCart.push({ ...product, quantity: 1 });
-    }
-
-    // Save the updated cart to localStorage
-    localStorage.setItem("cart", JSON.stringify(savedCart));
-    setCart(savedCart); // Update the state to trigger re-render
-  };
+  
 
   // Function to remove a product from the cart
   const handleRemoveFromCart = (ProductID: string) => {

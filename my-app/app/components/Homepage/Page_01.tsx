@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Page_Two from "../../Products-Listing/page";
+
 import Page_Two2 from "@/app/product-listing/page";
 
 
@@ -111,7 +111,3 @@ const Page_01:React.FC = () =>{
 }
 
 export default Page_01;
-
-
-
-
